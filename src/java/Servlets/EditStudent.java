@@ -6,12 +6,10 @@
 package Servlets;
 
 import Model.EditBookDao;
+import Model.EditStudentDao;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,28 +20,30 @@ import javax.servlet.http.HttpSession;
  *
  * @author admin
  */
-public class GetAllBook extends HttpServlet {
+public class EditStudent extends HttpServlet {
+
+   
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            PrintWriter out = response.getWriter();
-            HttpSession session = request.getSession(true);
-            EditBookDao dao=new EditBookDao();
-            ArrayList<String[]> list=dao.getAllBook();
-            request.setAttribute("bookname", list);
-            request.getRequestDispatcher("getallbook.jsp").forward(request, response);
-        } catch (ParseException ex) {
-            Logger.getLogger(GetAllBook.class.getName()).log(Level.SEVERE, null, ex);
-        }
+         PrintWriter out = response.getWriter();
+             HttpSession session = request.getSession(true);
+             EditStudentDao dao=new EditStudentDao();
+             ArrayList<String[]> list=dao.getbranchnameandstudent();
+             request.setAttribute("studentname", list); 
+//             for(int i =0;i<list.size();i++){
+//              out.println("val1="+list.get(i)[0]+" val2="+list.get(i)[1]);
+//             }
+//            
+             request.getRequestDispatcher("editstudent.jsp").forward(request, response);
     }
 
-  
+   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-      
+       
     }
 
    

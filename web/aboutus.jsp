@@ -110,45 +110,16 @@
       <!-- ################################################################################################ -->
       <div class="group btmspace-30"> 
         <!-- Left Column -->
-        <div class="one_quarter first"> 
-          <!-- ################################################################################################ -->
-          <ul class="nospace">
-<!--            <li class="btmspace-15"><a href="#"><em class="heading">Prospective Students</em> <img class="borderedbox" src="images/demo/220x95.gif" alt=""></a></li>
-            <li class="btmspace-15"><a href="#"><em class="heading">Current Students</em> <img class="borderedbox" src="images/demo/220x95.gif" alt=""></a></li>
-            <li class="btmspace-15"><a href="#"><em class="heading">International Students</em> <img class="borderedbox" src="images/demo/220x95.gif" alt=""></a></li>
-            <li><a href="#"><em class="heading">Alumni</em> <img class="borderedbox" src="images/demo/220x95.gif" alt=""></a></li>-->
-<h2>Latest News &amp; Events</h2>
- <marquee direction="up"  onmouseover="this.stop();" onmouseout="this.start();">
-          <ul class="nospace listing">
-            <li class="clear">
-<!--              <div class="imgl borderedbox"><img src="images/demo/120x120.gif" alt=""></div>-->
-              <p class="nospace btmspace-15"><a href="#">Application Form Scholarship 2016-17</a></p>
-              <p>Application Form Scholarship 2016-17
-VIMP
-  All the students are hereby informed that please go through following link for downloading the same.
-</p><!--<a href="pdeacoem.org/news0">Website Template Licence</a>-->
-            </li>
-            <li class="clear">
-<!--              <div class="imgl borderedbox"><img src="images/demo/120x120.gif" alt=""></div>-->
-              <p class="nospace btmspace-15"><a href="#">Application Form EBC 2016-17</a></p>
-              <p>Notice Regarding Regular Attendance
-All the students are hereby informed that they should attend the lecturers and practical''s regularly otherwise strict action will be taken against absent students. The students having the attendance below 75% should take the permission from Dean academic before attending the classes.
-  For viewing detailed please click link below.</p>
-            </li>
-            <li class="clear">
-<!--              <div class="imgl borderedbox"><img src="images/demo/120x120.gif" alt=""></div>-->
-              <p class="nospace btmspace-15"><a href="#">Sentumquisque morbi dui congue.</a></p>
-              <p>For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>. Attincidunt vel nam a maurisus lacinia consectetus magnisl sed ac morbi. Inmaurisus habitur pretium eu et ac vest penatibus id lacus parturpis.</p>
-            </li>
-          </ul>
-              </marquee>
-          <p class="right"><a href="#">Click here to view all of the latest news and events &raquo;</a></p>
-          </ul>
-          <!-- ################################################################################################ --> 
-        </div>
+
         <!-- / Left Column --> 
         <!-- Middle Column -->
+        <p><b>O</b>ver the years, there has been dynamic progress at C.O.E. Manjari in all academic and research activities, and a parallel improvement in facilities and infrastructure, to keep it on par with the best institutions in MAHARASHTRA. Institutes in positions of excellence grow with time. The ideas and ideals on which such institutes are built evolve and change with national aspirations, national perspectives, and trends world - wide. C.O.E.,Manjari , too, is one such institution.</p>
+          <h2>VISION</h2>
+          <p>Providing nurturing ground for an individual's development to make effective contribution to the society in dynamic environment through academic excellence for professional competency.</p>
+          <h2>MISSION</h2>
+          <p>To provide the state of the art educational facilities for training students for the career in engineering and technology. To organize quality improvement programs on advances in current technology for the benefit of core stakeholders of community. To provide leadership in curriculum design and development to strengthen industry-institute commune.</p>
         <div class="one_half" > 
+            
           <!-- ################################################################################################ -->
           <table class="table-fill">
 <thead>

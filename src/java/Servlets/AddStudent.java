@@ -82,7 +82,7 @@ public class AddStudent extends HttpServlet {
             addstudentdao dao=new addstudentdao();
             String resultMsg = dao.addstudent(bean);
             out.print(resultMsg);
-            response.sendRedirect("addstudent.jsp?success=1");
+            response.sendRedirect("AddStudent?success=1");
         } catch (SQLException ex) {
             out.print(ex);
         } catch (NamingException ex) {

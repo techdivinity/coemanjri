@@ -6,12 +6,11 @@
 package Servlets;
 
 import Model.EditBookDao;
+import Model.EditStudentDao;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,28 +21,39 @@ import javax.servlet.http.HttpSession;
  *
  * @author admin
  */
-public class GetAllBook extends HttpServlet {
+public class ShowDropDownStudent extends HttpServlet {
 
+ 
+   
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            PrintWriter out = response.getWriter();
+        PrintWriter out = response.getWriter();
             HttpSession session = request.getSession(true);
-            EditBookDao dao=new EditBookDao();
-            ArrayList<String[]> list=dao.getAllBook();
-            request.setAttribute("bookname", list);
-            request.getRequestDispatcher("getallbook.jsp").forward(request, response);
-        } catch (ParseException ex) {
-            Logger.getLogger(GetAllBook.class.getName()).log(Level.SEVERE, null, ex);
+        
+        
+            
+            String cat=request.getParameter("studentname");
+            try {
+            EditStudentDao dao=new EditStudentDao();
+            LinkedHashMap<String, String> m= dao.showdropdownstudent(cat);
+            for (HashMap.Entry<String, String> entry : m.entrySet()) 
+            {
+                 out.print("<option>"+entry.getValue()+"</option>");
+            }
+            out.print(cat);
+        } 
+            catch(Exception e)
+        {
+            out.print(e);
         }
     }
 
-  
+   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-      
+        
     }
 
    

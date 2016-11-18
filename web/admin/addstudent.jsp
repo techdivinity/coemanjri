@@ -73,23 +73,12 @@
                                             
                                        <div class="row">
                                         <div style="width: 49%;float: left">
-                                            <h5><b>Admission Date: <font color="tomato">*</font></b></h5>
-                                            <input type="text" class="form-control"  name="admissiondate" id="admissiondate"  placeholder="Enter  admission date" id="town"/>
+                                            <h5><b>Academic Year: <font color="tomato">*</font></b></h5>
+                                            <input type="text" class="form-control" name="admissionyear"  placeholder="Enter academicyear" id="admissionyear"/>
+                                            
                                         </div>
                                         <div style="width: 49%;float: right">
-                                             <h5><b>Academic Year: <font color="tomato">*</font></b></h5>
-                                            
-                                         <input type="text" class="form-control" name="admissionyear"  placeholder="Enter academicyear" id="admissionyear"/>
-                                        </div>
-                                    </div>
-                                            
-                                              <div class="row">
-                                        <div style="width: 49%;float: left">
-                                            <h5><b>Passout Year: <font color="tomato">*</font></b></h5>
-                                            <input type="text" class="form-control"  name="passoutyear" id="passoutyear"  placeholder="Enter passout year " id="passoutyear"/>
-                                        </div>
-                                        <div style="width: 49%;float: right">
-                                             <h5><b>Branch: <font color="tomato">*</font></b></h5>
+                                              <h5><b>Branch: <font color="tomato">*</font></b></h5>
                                             
                                        <select class="form-control"  name="branchname" id="branchname"   >
                                                    <c:forEach var="cat" items="${requestScope.branchname}">
@@ -99,11 +88,30 @@
                                                </select>
                                         </div>
                                     </div>
+                                            
+                                              <div class="row">
+                                        <div style="width: 49%;float: left">
+                                            <h5><b>Passout Year: <font color="tomato">*</font></b></h5>
+                                            <input type="text" class="form-control"  name="passoutyear" id="passoutyear"  placeholder="Enter passout year " id="passoutyear"/>
+                                        </div>
+                                        <div style="width: 49%;float: right">
+                                            <h5><b>Admission Date: <font color="tomato">*</font></b></h5>
+                                             <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="mm/dd/yyyy" name="admissiondate"  placeholder="Enter  admission date" id="datepicker" >
+                                                        <span class="input-group-addon bg-custom b-0 text-white"><i class="icon-calender"></i></span>
+                                                    </div>
+                                            
+                                        </div>
+                                    </div>
                                                   
                                          <div class="row">
                                         <div style="width: 49%;float: left">
-                                            <h5><b>Passout Date: <font color="tomato">*</font></b></h5>
-                                            <input type="text" class="form-control"  name="passoutdate" id="passoutdate"  placeholder="Enter passoutdate  " />
+                                            <h5><b>Passout Date: <font color="tomato">*</font></b></h5>                                           
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="mm/dd/yyyy" name="passoutdate" id="datepicker-autoclose">
+                                                        <span class="input-group-addon bg-custom b-0 text-white"><i class="icon-calender"></i></span>
+                                                    </div>
+                                            
                                         </div>
                                         <div style="width: 49%;float: right">
                                              <h5><b>Gender: <font color="tomato">*</font></b></h5>
@@ -161,7 +169,7 @@
                                                </select>
                                                              </div>
                                                               <div style="width: 49%;float: right;margin-top: 15px;margin-right: 0px;">
-                                                             <h5><b>Course: <font color="tomato">*</font></b></h5>
+                                                             <h5><b>Semester: <font color="tomato">*</font></b></h5>
                                           <select class="form-control"  name="semester" id="semester"   >
                                               <option>SEM-I</option>
                                               <option>SEM-II</option>

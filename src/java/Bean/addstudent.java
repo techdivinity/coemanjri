@@ -10,6 +10,15 @@ package Bean;
  * @author admin
  */
 public class addstudent {
+    String studentid;
+
+    public String getStudentid() {
+        return studentid;
+    }
+
+    public void setStudentid(String studentid) {
+        this.studentid = studentid;
+    }
     String name;
     String prnno;
     String admissiondate;

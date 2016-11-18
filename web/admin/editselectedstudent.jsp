@@ -12,9 +12,7 @@
         <title>Ubold - Responsive Admin Dashboard Template</title>
 
         <!-- Plugins css -->
-       <link href="../assets/plugins/custombox/dist/custombox.min.css" rel="stylesheet">
-        
-        <link href="../assets/plugins/custombox/dist/custombox.min.css" rel="stylesheet">
+       
         <link href="../assets/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
 		<link href="../assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
 		<link href="../assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
@@ -38,7 +36,6 @@
 
         <script src="../assets/js/modernizr.min.js"></script>
 
-
     </head>
 
 
@@ -48,124 +45,131 @@
 <jsp:include page="menu.html"/>
         <div class="wrapper">
             <div class="container">
-                
-                
+
                 <!-- Page-Title -->
           
               
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="card-box">
-                                 <c:choose>
-                       <c:when test= "${sessionScope.msg1=='SUCCESS'}">
-                           <script>alert('success');</script>
-                            <a id="linkForPopUp" href="#success-modal"  data-animation="fadein" data-plugin="custommodal" 
-                                   data-overlaySpeed="200" data-overlayColor="#36404a" ></a>
-                            
-                        </c:when>
-                        <c:when test= "${sessionScope.msg1=='ERROR'}">
-                              <script>alert('error');</script>
-                            <a id="linkForPopUp" href="#error-modal"  data-animation="fadein" data-plugin="custommodal" 
-                                   data-overlaySpeed="200" data-overlayColor="#36404a" ></a>
-                        </c:when>
-                        <c:otherwise>
-                              
-                        </c:otherwise>
-                    </c:choose>
-                        <c:remove var="msg1" scope="session"/>
+                          <c:set var="bean" value="${requestScope.msg}"/>
                             <div class="row">
-                                
-                                  <form  class="form-horizontal m-t-20" action="AddBook" method="post" >   
+                                  <form  class="form-horizontal m-t-20" action="AddStudent" method="post">   
                                         
                <div>
                                             <div class="row">
                                         <div style="width: 49%;float: left">
-                                            <h5><b>Book Title: <font color="tomato">*</font></b></h5>
-                                            <input type="text" class="form-control"  name="booktitle" id=studentname"  placeholder="Enter Book name" id="town"/>
+                                            <h5><b>Name: <font color="tomato">*</font></b></h5>
+                                            <input type="text" class="form-control"  name="name" id=studentname"  placeholder="Enter student name" id="town" value="${bean[1]}"/>
                                         </div>
                                         <div style="width: 49%;float: right">
-                                             <h5><b>Author: <font color="tomato">*</font></b></h5>
+                                             <h5><b>PRN No: <font color="tomato">*</font></b></h5>
                                             
-                                         <input type="text" class="form-control" name="author"  placeholder="Enter Author Name" id="prnno"/>
+                                         <input type="text" class="form-control" name="prnno"  placeholder="Enter prn no" id="prnno" value="${bean[2]}"/>
                                         </div>
                                     </div>
                                             
                                        <div class="row">
                                         <div style="width: 49%;float: left">
-                                            <h5><b>Publisher: <font color="tomato">*</font></b></h5>
-                                            <input type="text" class="form-control"  name="publisher" id="admissiondate"  placeholder="Enter  Publisher Info" id="town"/>
+                                            <h5><b>Academic Year: <font color="tomato">*</font></b></h5>
+                                            <input type="text" class="form-control" name="admissionyear"  placeholder="Enter academicyear" id="admissionyear" value="${bean[3]}"/>
+                                            
                                         </div>
                                         <div style="width: 49%;float: right">
-                                             <h5><b>Book Number: <font color="tomato">*</font></b></h5>
+                                              <h5><b>Branch: <font color="tomato">*</font></b></h5>
                                             
-                                         <input type="text" class="form-control" name="booknumber"  placeholder="Enter Book Number" id="admissionyear"/>
+                                       <select class="form-control"  name="branchname" id="branchname"   >
+                                           <option value="${bean[4]}">${bean[9]}</option>
+                                               </select>
                                         </div>
                                     </div>
                                             
                                               <div class="row">
                                         <div style="width: 49%;float: left">
-                                            <h5><b>Account Number: <font color="tomato">*</font></b></h5>
-                                            <input type="text" class="form-control"  name="accountnumber" id="passoutyear"  placeholder="Enter Account Number " iyeard="passoutyear"/>
+                                            <h5><b>Passout Year: <font color="tomato">*</font></b></h5>
+                                            <input type="text" class="form-control"  name="passoutyear" id="passoutyear"  placeholder="Enter passout year " id="passoutyear" value="${bean[4]}"/>
                                         </div>
-                                        <div style="width: 49%;float: right;margin-top: 15px;">
-                                            <h5><b>Source: <font color="tomato">*</font></b></h5>
-                                            <input type="text" class="form-control"  name="source" id="company"  placeholder="Enter Source Info " id="branch"/>
+                                        <div style="width: 49%;float: right">
+                                            <h5><b>Admission Date: <font color="tomato">*</font></b></h5>
+                                             <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="mm/dd/yyyy" name="admissiondate"  placeholder="Enter  admission date" id="datepicker" value="${bean[5]}">
+                                                        <span class="input-group-addon bg-custom b-0 text-white"><i class="icon-calender"></i></span>
+                                                    </div>
+                                            
                                         </div>
                                     </div>
                                                   
                                          <div class="row">
                                         <div style="width: 49%;float: left">
-                                            <h5><b>Branch: <font color="tomato">*</font></b></h5>
-                                             <select class="form-control"  name="branchname" id="branchname"   >
-                                                   <c:forEach var="cat" items="${requestScope.branchname}" >
-                                                   <option value="${cat.key}">${cat.value}</option>
-                                                   </c:forEach>
-                                                
-                                               </select>
+                                            <h5><b>Passout Date: <font color="tomato">*</font></b></h5>                                           
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="mm/dd/yyyy" name="passoutdate" id="datepicker-autoclose" value="${bean[6]}">
+                                                        <span class="input-group-addon bg-custom b-0 text-white"><i class="icon-calender"></i></span>
+                                                    </div>
                                             
                                         </div>
                                         <div style="width: 49%;float: right">
-                                             <h5><b>Pages: <font color="tomato">*</font></b></h5>
-                                           <input type="text" class="form-control"  name="pages" id="passoutdate"  placeholder="Enter Number Of Pages  " />
+                                             <h5><b>Gender: <font color="tomato">*</font></b></h5>
+                                            
+                                         <input type="radio" name="gender" value="${bean[7]}" style="display: inline" />Male
+                                          <input type="radio" name="gender" value="${bean[7]}" style="display: inline" value="${bean[0]}"/>Female
                                         </div>
                                     </div>
                                                   
                                        <div class="row">
-                                           <div style="width: 49%;float: right">
-                                             <h5><b>Publication Year: <font color="tomato">*</font></b></h5>
-                                            
-                                     <div class="input-group">
-                                                        <input type="text" class="form-control" placeholder="mm/dd/yyyy" name="publicationdate" id="datepicker" >
-                                                        <span class="input-group-addon bg-custom b-0 text-white"><i class="icon-calender"></i></span>
-                                                    </div><!-- input-group -->
+                                        <div style="width: 49%;float: right;margin-top: 15px;">
+                                            <h5><b>Company: <font color="tomato">*</font></b></h5>
+                                            <input type="text" class="form-control"  name="company" id="company"  placeholder="Enter comapany name " value="${bean[8]}" />
                                         </div>
-                                        
                                         <div style="width: 49%;float: left">
-                                             <h5><b>Price: <font color="tomato">*</font></b></h5>
+                                             <h5><b>City: <font color="tomato">*</font></b></h5>
                                             
-                                         <input type="text" class="form-control"  name="price" id="city"  placeholder="Enter Price " id="branch"/>
+                                         <input type="text" class="form-control"  name="city" id="city"  placeholder="Enter city name " value="${bean[9]}"/>
                                         </div>
                                     </div>
-                                
+                                                  
+                                      <div class="row">
+                                        <div style="width: 49%;float: right;margin-top: 15px;">
+                                            <h5><b>State: <font color="tomato">*</font></b></h5>
+                                            <input type="text" class="form-control"  name="state" id="state"  placeholder="Enter state " value="${bean[10]}" />
+                                        </div>
+                                        <div style="width: 49%;float: left;margin-top: 12px;">
+                                             <h5><b>Contact No: <font color="tomato">*</font></b></h5>
+                                            
+                                         <input type="text" class="form-control"  name="contactno" id="contactnno"  placeholder="Enter contactno" value="${bean[11]}" />
+                                        </div>
+                                    </div>
+                                                     <div class="row">
+                                        <div style="width: 49%;float: left;margin-top: 15px;">
+                                            <h5><b>Email: <font color="tomato">*</font></b></h5>
+                                            <input type="text" class="form-control"  name="email" id="email"  placeholder="Enter Email " value="${bean[12]}"/>
+                                        </div>
+                                                         <div style="width: 49%;float: right;margin-top: 15px;">
+                                                             <h5><b>Course: <font color="tomato">*</font></b></h5>
+                                          <select class="form-control"  name="course" id="course" value="${bean[13]}"   >
+                                          
+                                             
+                                          
+                                              
+                                              
+                                               </select>
+                                                             </div>
+                                                              <div style="width: 49%;float: right;margin-top: 15px;margin-right: 0px;">
+                                                             <h5><b>Semester: <font color="tomato">*</font></b></h5>
+                                          <select class="form-control"  name="semester" id="semester" value="${bean[14]}"  >
+                                             
+                                             
+                                              
+                                              
+                                               </select>
+                                                             </div>
+                                    </div>
                        
                                                   
                                                   <button type="submit" class="btn btn-warning waves-effect waves-light w-lg" style="float: right;margin-top: 130px;height: 40px;">Submit</button>
                                             </div>
                                     </form>
                             </div>
-                     <div id="success-modal" class="modal-demo">
-                        <h4 class="custom-modal-title"></h4>
-                        <br><br>
-                        <img src="../icon/done32.png"/> <b><font color="green">Task Created Successfully.</font></b><br><br>
-                        <button type="button" onclick="Custombox.close();" class="btn btn-default waves-effect waves-light">   OK   </button><br><br>
-                </div>
-                <div id="error-modal" class="modal-demo" >
-                        <h4 class="custom-modal-title"></h4>
-                        <br><br>
-                        <img src="../icon/Error-32.png"/> <b><font color="red">Something Went Wrong. Try Again.</font></b><br><br>
-                        <button type="button" onclick="Custombox.close();" class="btn btn-default waves-effect waves-light">   OK   </button><br><br>
-                </div>
-                                        
                         </div>
                     </div>
                 </div>
@@ -228,12 +232,6 @@
      	<script src="../assets/plugins/clockpicker/js/bootstrap-clockpicker.min.js"></script>
      	<script src="../assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 
-        
-         
-                
-                <script src="../assets/plugins/custombox/dist/custombox.min.js"></script>
-       
-        
         <!-- App core js -->
         <script src="../assets/js/jquery.core.js"></script>
         <script src="../assets/js/jquery.app.js"></script>

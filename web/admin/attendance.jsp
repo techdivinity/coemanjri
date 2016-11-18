@@ -41,6 +41,7 @@
     <body>
 
 <jsp:include page="top.jsp"/>
+<jsp:include page="menu.html"/>
         <div class="wrapper">
             <div class="container">
 

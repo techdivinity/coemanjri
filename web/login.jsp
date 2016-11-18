@@ -102,13 +102,13 @@
        
       <!-- ################################################################################################ -->
        <div id="slider">
-<figure>
+<!--<figure>
 <img src="images/demo/slider/1.jpg" alt>
 <img src="images/demo/slider/2.jpg" alt>
 <img src="images/demo/slider/3.jpg" alt>
 <img src="images/demo/slider/4.jpg" alt>
 
-</figure>
+</figure>-->
 </div>
 <!--      <figure id="slide-1"><a class="view" href="#"><img src="images/demo/slider/1.jpg" alt=""></a>
         <figcaption>
@@ -167,42 +167,7 @@
       <!-- ################################################################################################ -->
       <div class="group btmspace-30"> 
         <!-- Left Column -->
-        <div class="one_quarter first"> 
-          <!-- ################################################################################################ -->
-          <ul class="nospace">
-<!--            <li class="btmspace-15"><a href="#"><em class="heading">Prospective Students</em> <img class="borderedbox" src="images/demo/220x95.gif" alt=""></a></li>
-            <li class="btmspace-15"><a href="#"><em class="heading">Current Students</em> <img class="borderedbox" src="images/demo/220x95.gif" alt=""></a></li>
-            <li class="btmspace-15"><a href="#"><em class="heading">International Students</em> <img class="borderedbox" src="images/demo/220x95.gif" alt=""></a></li>
-            <li><a href="#"><em class="heading">Alumni</em> <img class="borderedbox" src="images/demo/220x95.gif" alt=""></a></li>-->
-<h2>Latest News &amp; Events</h2>
- <marquee direction="up"  onmouseover="this.stop();" onmouseout="this.start();">
-          <ul class="nospace listing">
-            <li class="clear">
-<!--              <div class="imgl borderedbox"><img src="images/demo/120x120.gif" alt=""></div>-->
-              <p class="nospace btmspace-15"><a href="#">Application Form Scholarship 2016-17</a></p>
-              <p>Application Form Scholarship 2016-17
-VIMP
-  All the students are hereby informed that please go through following link for downloading the same.
-</p><!--<a href="pdeacoem.org/news0">Website Template Licence</a>-->
-            </li>
-            <li class="clear">
-<!--              <div class="imgl borderedbox"><img src="images/demo/120x120.gif" alt=""></div>-->
-              <p class="nospace btmspace-15"><a href="#">Application Form EBC 2016-17</a></p>
-              <p>Notice Regarding Regular Attendance
-All the students are hereby informed that they should attend the lecturers and practical''s regularly otherwise strict action will be taken against absent students. The students having the attendance below 75% should take the permission from Dean academic before attending the classes.
-  For viewing detailed please click link below.</p>
-            </li>
-            <li class="clear">
-<!--              <div class="imgl borderedbox"><img src="images/demo/120x120.gif" alt=""></div>-->
-              <p class="nospace btmspace-15"><a href="#">Sentumquisque morbi dui congue.</a></p>
-              <p>For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>. Attincidunt vel nam a maurisus lacinia consectetus magnisl sed ac morbi. Inmaurisus habitur pretium eu et ac vest penatibus id lacus parturpis.</p>
-            </li>
-          </ul>
-              </marquee>
-          <p class="right"><a href="#">Click here to view all of the latest news and events &raquo;</a></p>
-          </ul>
-          <!-- ################################################################################################ --> 
-        </div>
+      
         <!-- / Left Column --> 
         <!-- Middle Column -->
         <div class="one_half" > 

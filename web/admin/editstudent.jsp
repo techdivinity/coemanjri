@@ -35,7 +35,7 @@
 
         <script src="../assets/js/modernizr.min.js"></script>
       
-        <script src="../js/showdropdown.js"></script>
+        <script src="../js/showdropdownstudent.js"></script>
         
         <script>
      function showDropDown(){
@@ -107,17 +107,17 @@ $(document).click(function(e) {
                         <div class="card-box">
                           
                             <div class="row">
-                                 <form  class="form-horizontal m-t-20" action="EditSelectedBook" method="post">   
+                                 <form  class="form-horizontal m-t-20" action="EditSelectedStudent" method="post">   
                                         
                <div>
                                    <div class="row">
                                        
                                        
                                          <div style="width: 40%;float: left;margin-left: 80px;margin-top: 15px;">
-                                            <h5><b>Author: <font color="tomato">*</font></b></h5>
-                                            <select class="form-control" onchange="showItem()"  name="authorname" id="itm"   >
+                                            <h5><b>Branch Code: <font color="tomato">*</font></b></h5>
+                                            <select class="form-control" onchange="showItem()"  name="studentname" id="itm"   >
                                              <option></option>
-                                                   <c:forEach var="cat" items="${requestScope.authorname}">
+                                                   <c:forEach var="cat" items="${requestScope.studentname}">
                                                    <option>${cat[1]}</option>
                                                    </c:forEach>
                                                 
@@ -125,8 +125,8 @@ $(document).click(function(e) {
                                              <div style="float: right;padding-left: 5px"> <img src="../icons/loading3.gif" id="load" width="18" height="18" alt="loading3" style="margin: 0px;display: none"/></div>
                                          </div>
                                          <div style="width: 40%;float: right;margin-right: 80px;margin-top: 15px;">
-                                            <h5><b>Book Title: <font color="tomato">*</font></b></h5>
-                                          <select class="form-control"  name="booktitle" id="branchname"   >
+                                            <h5><b>Student Name: <font color="tomato">*</font></b></h5>
+                                          <select class="form-control"  name="studentitle" id="branchname"   >
                                                  
                                                 
                                                </select>

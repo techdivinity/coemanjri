@@ -69,6 +69,18 @@
         <servlet-name>SearchedBook</servlet-name>
         <servlet-class>Servlets.SearchedBook</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ShowDropDownStudent</servlet-name>
+        <servlet-class>Servlets.ShowDropDownStudent</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditStudent</servlet-name>
+        <servlet-class>Servlets.EditStudent</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditSelectedStudent</servlet-name>
+        <servlet-class>Servlets.EditSelectedStudent</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -136,6 +148,18 @@
     <servlet-mapping>
         <servlet-name>SearchedBook</servlet-name>
         <url-pattern>/SearchedBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowDropDownStudent</servlet-name>
+        <url-pattern>/ShowDropDownStudent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditStudent</servlet-name>
+        <url-pattern>/admin/EditStudent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditSelectedStudent</servlet-name>
+        <url-pattern>/admin/EditSelectedStudent</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>

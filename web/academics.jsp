@@ -127,13 +127,13 @@
        
       <!-- ################################################################################################ -->
        <div id="slider">
-<figure>
+<!--<figure>
 <img src="images/demo/slider/1.jpg" alt>
 <img src="images/demo/slider/2.jpg" alt>
 <img src="images/demo/slider/3.jpg" alt>
 <img src="images/demo/slider/4.jpg" alt>
 
-</figure>
+</figure>-->
 </div>
 <!--      <figure id="slide-1"><a class="view" href="#"><img src="images/demo/slider/1.jpg" alt=""></a>
         <figcaption>

@@ -44,8 +44,10 @@ public class AddBook extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+              PrintWriter out =response.getWriter();
+              HttpSession session = request.getSession(true);
         try {
-            PrintWriter out =response.getWriter();
+           
             String name=request.getParameter("booktitle");
             String author=request.getParameter("author");
             String publisher=request.getParameter("publisher");
@@ -68,16 +70,19 @@ public class AddBook extends HttpServlet {
             bean.setPublicationyear(publicationdate);
             bean.setPrice(price);
             AddBookDao dao = new AddBookDao();
-            String resultMsg = dao.savebookdetails(bean);
-            out.println(resultMsg);
+            String result = dao.savebookdetails(bean);
+            //out.println(resultMsg);
+            if(result.equals("SUCCESS"))
+            {
+                session.setAttribute("msg1", result);
+            }else{
+                session.setAttribute("msg1", "ERROR");
+            }
             response.sendRedirect("addbook.jsp");
-        } catch (NamingException ex) {
-            Logger.getLogger(AddBook.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(AddBook.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ParseException ex) {
-            Logger.getLogger(AddBook.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } 
+         catch (Exception e) {
+           out.println(e);
+        } 
       
     }
 

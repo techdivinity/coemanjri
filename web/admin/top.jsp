@@ -60,7 +60,7 @@
                    
 
                             <li class="dropdown navbar-c-items">
-                                <a href="" class="dropdown-toggle waves-effect waves-light profile" data-toggle="dropdown" aria-expanded="true"><img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle">${sessionScope.user} </a>
+                                <a href="" class="dropdown-toggle waves-effect waves-light profile" data-toggle="dropdown" aria-expanded="true">${sessionScope.user} </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="javascript:void(0)"><i class="ti-user text-custom m-r-10"></i> Profile</a></li>
                                     <li><a href="javascript:void(0)"><i class="ti-settings text-custom m-r-10"></i> Settings</a></li>
@@ -107,7 +107,16 @@
                             </li>
 
 
-                            <li class="has-submenu"><a href="AddStudent" class="waves-effect waves-light "> <i class="md md-add-box"></i><span> add student entry </span> </a></li>
+                            <li class="has-submenu">
+                                <a href="" class="waves-effect waves-light "> <i class="md md-add-box"></i><span> add student profile  </span> </a>
+                                  <ul class="submenu">
+                                    <li>
+                                         <a href="AddStudent" class="waves-effect waves-light "><span> add student </span> </a>
+                                         <li><a href="EditStudent" class="waves-effect waves-light "> <span> Edit student </span> </a></li>
+                                         <li><a href="SearchStudent" class="waves-effect waves-light "> <span> Search student </span> </a></li>
+                                    </li>
+                                </ul>                            
+                            </li>
                              <li class="has-submenu"><a href="calendar.jsp" class="waves-effect waves-light "><i class="md md-alarm-on"></i> <span> calendar </span> </a></li>
                      <li class="has-submenu"><a href="BranchWiseAttendance" class="waves-effect waves-light "> <i class="md md-check"></i><span> Attendance </span> </a></li>
 
