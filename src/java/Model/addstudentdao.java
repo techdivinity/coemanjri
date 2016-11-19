@@ -31,8 +31,8 @@ public class addstudentdao {
         String prnno=bean.getPrnno();
         String admissiondate=bean.getAdmissiondate();
         String admissionyear=bean.getAdmissionyear();
-        String passoutyear=bean.getPassoutyear();
-        String passoutdate=bean.getPassoutdate();
+       // String passoutyear=bean.getPassoutyear();
+       // String passoutdate=bean.getPassoutdate();
         String branchname=bean.getBranchname();
         String gender=bean.getGender();
         String city=bean.getCity();
@@ -50,7 +50,7 @@ public class addstudentdao {
                con = DBConnection.createconnection();
                 String sql = null;
             try {
-                sql = "insert into student(name,prnno,admissiondate,admissionyear,passoutyear,passoutdate,branchname,gender,company,city,state,contactno,email,course,semester)values('"+name+"','"+prnno+"','"+dateParse.getMysqlDate(admissiondate)+"','"+admissionyear+"','"+passoutyear+"','"+dateParse.getMysqlDate(passoutdate)+"','"+branchname+"','"+gender+"','"+company+"','"+city+"','"+state+"','"+contactno+"','"+email+"','"+course+"','"+semester+"')";
+                sql = "insert into student(name,prnno,admissiondate,admissionyear,branchname,gender,company,city,state,contactno,email,course,semester)values('"+name+"','"+prnno+"','"+dateParse.getMysqlDate(admissiondate)+"','"+admissionyear+"','"+branchname+"','"+gender+"','"+company+"','"+city+"','"+state+"','"+contactno+"','"+email+"','"+course+"','"+semester+"')";
             } catch (ParseException ex) {
                 Logger.getLogger(addstudentdao.class.getName()).log(Level.SEVERE, null, ex);
             }

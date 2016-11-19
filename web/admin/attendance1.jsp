@@ -66,7 +66,7 @@
                                                 <label class="control-label col-sm-4">Select  Date</label>
                                                 <div class="col-sm-8">
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control" placeholder="mm/dd/yyyy" id="datepicker">
+                                                        <input type="text" class="form-control" name="attendancedate" placeholder="mm/dd/yyyy" id="datepicker">
                                                         <span class="input-group-addon bg-custom b-0 text-white"><i class="icon-calender"></i></span>
                                                     </div><!-- input-group -->
                                                 </div>
@@ -91,16 +91,17 @@
                     </thead>
                 
                  <tbody>
-                    <c:forEach var="item" items="${requestScope.studentlist}">
+                    <c:forEach  var="item" items="${requestScope.studentlist}">
                        <tr>
                            <c:forEach var="itemVal" items="${item}">
-                               <td style="color: red"><c:out value="${itemVal}" /></td>
+                               <td style="color: red"><c:out value="${itemVal}"  /><input type="hidden" name="student"></td>
                            </c:forEach>
                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"  name="check"     value=""/></td>
+                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                           <input type="checkbox"  name="check" value=""/></td>
                        </tr>
                     
                     </c:forEach>

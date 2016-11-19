@@ -52,36 +52,33 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="card-box">
-                          <c:set var="bean" value="${requestScope.msg}"/>
+                         
                             <div class="row">
                                   <form  class="form-horizontal m-t-20" action="AddStudent" method="post">   
                                         
                                       <table>
                                           <thead>
-                                          <th>name</th>
-                                          <th>prn no</th>
-                                          <th>Admission year</th>
-                                          <th>phone no</th>
-                                          <th>e-mail</th>
+                                          <th>branchcode</th>
+                                          <th>branch</th>
+                                          <th>description</th>
+                                          
                                           </thead>
                                           <tbody>
+                                              <c:forEach var="bean" items="${requestScope.branchlist}" varStatus="i">
                                               <tr>
                                                   <td>
-                                                      <input type="text" class="form-control"  name="name" id=studentname"  placeholder="Enter student name" id="town" value="${bean[1]}"/>
+                                                      <input type="text" class="form-control"  value="${bean[0]}"/>
                                                   </td>
                                                   <td>
-                                                      <input type="text" class="form-control"  name="name" id=studentname"  placeholder="Enter student name" id="town" value="${bean[2]}"/>
+                                                      <input type="text" class="form-control"   value="${bean[1]}"/>
                                                   </td>
                                                   <td>
-                                                      <input type="text" class="form-control"  name="name" id=studentname"  placeholder="Enter student name" id="town" value="${bean[4]}"/>
+                                                      <input type="text" class="form-control"   value="${bean[2]}"/>
                                                   </td>
-                                                  <td>
-                                                      <input type="text" class="form-control"  name="name" id=studentname"  placeholder="Enter student name" id="town" value="${bean[8]}"/>
-                                                  </td>
-                                                  <td>
-                                                      <input type="text" class="form-control"  name="name" id=studentname"  placeholder="Enter student name" id="town" value="${bean[9]}"/>
-                                                  </td>
+                                                 
+                                                 
                                               </tr>
+                                              </c:forEach>
                                           </tbody>
                                       </table>
                                     </form>

@@ -52,8 +52,8 @@ public class AddStudent extends HttpServlet {
             String prnno=request.getParameter("prnno");
             String admissiondate=request.getParameter("admissiondate");
             String admisionyear=request.getParameter("admissionyear");
-            String passoutyear=request.getParameter("passoutyear");
-            String passoutdate=request.getParameter("passoutdate");
+           // String passoutyear=request.getParameter("passoutyear");
+           // String passoutdate=request.getParameter("passoutdate");
             String branchname=request.getParameter("branchname");
             String gender=request.getParameter("gender");
             String company=request.getParameter("company");
@@ -68,8 +68,8 @@ public class AddStudent extends HttpServlet {
             bean.setPrnno(prnno);
             bean.setAdmissiondate(admissiondate);
             bean.setAdmissionyear(admisionyear);
-            bean.setPassoutdate(passoutdate);
-            bean.setPassoutyear(passoutyear);
+        //    bean.setPassoutdate(passoutdate);
+          //  bean.setPassoutyear(passoutyear);
             bean.setBranchname(branchname);
             bean.setGender(gender);
             bean.setCompany(company);

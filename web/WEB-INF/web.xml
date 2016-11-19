@@ -81,6 +81,18 @@
         <servlet-name>EditSelectedStudent</servlet-name>
         <servlet-class>Servlets.EditSelectedStudent</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetAllStudent</servlet-name>
+        <servlet-class>Servlets.GetAllStudent</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetBranchCode</servlet-name>
+        <servlet-class>Servlets.GetBranchCode</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Attendance</servlet-name>
+        <servlet-class>Servlets.Attendance</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -160,6 +172,18 @@
     <servlet-mapping>
         <servlet-name>EditSelectedStudent</servlet-name>
         <url-pattern>/admin/EditSelectedStudent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetAllStudent</servlet-name>
+        <url-pattern>/admin/GetAllStudent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetBranchCode</servlet-name>
+        <url-pattern>/admin/GetBranchCode</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Attendance</servlet-name>
+        <url-pattern>/admin/Attendance</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>

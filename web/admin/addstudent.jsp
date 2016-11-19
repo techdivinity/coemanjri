@@ -90,11 +90,11 @@
                                     </div>
                                             
                                               <div class="row">
-                                        <div style="width: 49%;float: left">
+<!--                                        <div style="width: 49%;float: left">
                                             <h5><b>Passout Year: <font color="tomato">*</font></b></h5>
                                             <input type="text" class="form-control"  name="passoutyear" id="passoutyear"  placeholder="Enter passout year " id="passoutyear"/>
-                                        </div>
-                                        <div style="width: 49%;float: right">
+                                        </div>-->
+                                        <div style="width: 49%;float: left">
                                             <h5><b>Admission Date: <font color="tomato">*</font></b></h5>
                                              <div class="input-group">
                                                         <input type="text" class="form-control" placeholder="mm/dd/yyyy" name="admissiondate"  placeholder="Enter  admission date" id="datepicker" >
@@ -105,15 +105,15 @@
                                     </div>
                                                   
                                          <div class="row">
-                                        <div style="width: 49%;float: left">
+<!--                                        <div style="width: 49%;float: left">
                                             <h5><b>Passout Date: <font color="tomato">*</font></b></h5>                                           
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" placeholder="mm/dd/yyyy" name="passoutdate" id="datepicker-autoclose">
                                                         <span class="input-group-addon bg-custom b-0 text-white"><i class="icon-calender"></i></span>
                                                     </div>
                                             
-                                        </div>
-                                        <div style="width: 49%;float: right">
+                                        </div>-->
+                                        <div style="width: 49%;float: left;">
                                              <h5><b>Gender: <font color="tomato">*</font></b></h5>
                                             
                                          <input type="radio" name="gender" value="male" style="display: inline"/>Male
@@ -122,11 +122,11 @@
                                     </div>
                                                   
                                        <div class="row">
-                                        <div style="width: 49%;float: right;margin-top: 15px;">
+                                        <div style="width: 49%;float: right;margin-top: -130px;">
                                             <h5><b>Company: <font color="tomato">*</font></b></h5>
                                             <input type="text" class="form-control"  name="company" id="company"  placeholder="Enter comapany name " id="branch"/>
                                         </div>
-                                        <div style="width: 49%;float: left">
+                                        <div style="width: 49%;float: left;margin-top: 20px;">
                                              <h5><b>City: <font color="tomato">*</font></b></h5>
                                             
                                          <input type="text" class="form-control"  name="city" id="city"  placeholder="Enter city name " id="branch"/>
@@ -134,11 +134,11 @@
                                     </div>
                                                   
                                       <div class="row">
-                                        <div style="width: 49%;float: right;margin-top: 15px;">
+                                        <div style="width: 49%;float: right;margin-top: -140px;">
                                             <h5><b>State: <font color="tomato">*</font></b></h5>
                                             <input type="text" class="form-control"  name="state" id="state"  placeholder="Enter state " />
                                         </div>
-                                        <div style="width: 49%;float: left;margin-top: 12px;">
+                                        <div style="width: 49%;float: left;margin-top: 15px;">
                                              <h5><b>Contact No: <font color="tomato">*</font></b></h5>
                                             
                                          <input type="text" class="form-control"  name="contactno" id="contactnno"  placeholder="Enter contactno" />
@@ -149,7 +149,7 @@
                                             <h5><b>Email: <font color="tomato">*</font></b></h5>
                                             <input type="text" class="form-control"  name="email" id="email"  placeholder="Enter Email " id="branch"/>
                                         </div>
-                                                         <div style="width: 49%;float: right;margin-top: 15px;">
+                                                         <div style="width: 49%;float: right;margin-top: -150px;">
                                                              <h5><b>Course: <font color="tomato">*</font></b></h5>
                                           <select class="form-control"  name="course" id="course"   >
                                               <option>B.Tech</option>
@@ -168,7 +168,7 @@
                                               
                                                </select>
                                                              </div>
-                                                              <div style="width: 49%;float: right;margin-top: 15px;margin-right: 0px;">
+                                                              <div style="width: 49%;float: right;margin-top: -80px;margin-right: 0px;">
                                                              <h5><b>Semester: <font color="tomato">*</font></b></h5>
                                           <select class="form-control"  name="semester" id="semester"   >
                                               <option>SEM-I</option>

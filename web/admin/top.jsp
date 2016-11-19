@@ -113,7 +113,8 @@
                                     <li>
                                          <a href="AddStudent" class="waves-effect waves-light "><span> add student </span> </a>
                                          <li><a href="EditStudent" class="waves-effect waves-light "> <span> Edit student </span> </a></li>
-                                         <li><a href="SearchStudent" class="waves-effect waves-light "> <span> Search student </span> </a></li>
+                                         <li><a href="GetAllStudent" class="waves-effect waves-light "> <span> Get All student </span> </a></li>
+                                         <li><a href="GetBranchCode" class="waves-effect waves-light "> <span> Branch Code </span> </a></li>
                                     </li>
                                 </ul>                            
                             </li>
